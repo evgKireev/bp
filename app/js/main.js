@@ -71,6 +71,7 @@ function renderBody(data) {
   function displayWindowSize() {
     let currentWidthWindow = document.documentElement.clientWidth
     let size = currentWidthWindow * 0.08
+    console.log(size)
     windowSize.style.fontSize = `${size}px`
   }
   window.addEventListener('resize', displayWindowSize)
