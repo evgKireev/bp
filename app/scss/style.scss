@@ -231,7 +231,6 @@
   color: $text;
   opacity: 0.5;
   @extend%roboto-400;
-  text-decoration-line: underline;
 }
 
 .banner-footer_links {
@@ -382,7 +381,7 @@ html[lang='ru'] .title {
 }
 
 html[lang='ru'] .banner-body__title {
-  padding: 0 2vw;
+  padding: 0 1vw;
 }
 
 html[lang='ru'] .banner-body__items {
