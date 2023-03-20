@@ -71,34 +71,86 @@
 }
 
 .title {
-  font-family: SF-Pro-Display-Bold;
-  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  @extend%sfprodisplay-700;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner-body__items {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   text-align: center;
   letter-spacing: -0.321111px;
+  padding-left: 6vw;
+  @extend%sfprodisplay-400;
 }
+
 .banner-body__item {
   display: flex;
   align-items: center;
   padding: 0 5px;
-  font-size: 20px;
-}
-.banner-body__item span {
-  font-size: 18px;
+  font-size: 17px;
+  @extend%sfpro-400;
 }
 
-.banner-body__item img {
-  width: 20px;
-  height: 20px;
+.subscriptionTitle {
+  position: absolute;
+  top: 2.5vh;
+  font-size: 17px;
+  text-align: center;
+  left: 0;
+  width: 100%;
 }
+
+.subscriptionPrice {
+  position: absolute;
+  top: 6vh;
+  font-size: 18px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.subscriptionInfo {
+  position: absolute;
+  top: 12vh;
+  font-size: 15px;
+  left: -0.3vw;
+  width: 34vw;
+  text-align: center;
+  background-color: #495795;
+}
+
+.subscriptionSecondPrice {
+  position: absolute;
+  top: 15.5vh;
+  font-size: 15px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  @extend%sfprodisplay-400;
+}
+
+.fontInfoPrice {
+  font-size: 14px;
+}
+
+.banner-body__item {
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .banner-body__item__img {
-  margin-right: 10px;
+  margin-right: 8px;
 }
-.banner-body__item__description {
+
+.banner-body__item__description-doc,
+.banner-body__item__description-mode,
+.banner-body__item__description-recog {
   letter-spacing: -0.321111px;
   line-height: 30px;
   color: #ffffff;
@@ -106,13 +158,13 @@
 }
 
 .banner-body__subscription {
-  margin-top: 50px;
+  margin-top: 44px;
   width: 300px;
-  height: 180px;
+  height: 184px;
   display: flex;
   position: relative;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   font-family: SF-Pro-Display-Bold;
 }
 
@@ -128,14 +180,11 @@
 .subscriptionImg {
   position: relative;
 }
-.subscriptionImg img {
-  width: 100%;
-  height: 100%;
-}
-
-.subscriptionTitle {
-  font-size: 17px;
-  width: 100%;
+.subscriptionImg {
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .active,
@@ -162,28 +211,12 @@
 }
 
 .banner-body__btnContinue {
-  background: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
-  border-radius: 30px;
-  width: 70vw;
-  height: 6.5vh;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font-family: SF-Pro-Display-Bold;
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 17px;
-}
-
-.banner-body__btnContinue:focus,
-.banner-body__btnContinue:focus {
-  outline: none;
-}
-.banner-body__btnContinue:active {
-  background-color: #333;
-  border-color: #333;
-  color: #eee;
+  @extend%btn;
+  &:active {
+    background-color: #373636;
+    border-color: #373636;
+    color: $text;
+  }
 }
 
 .banner-footer {
@@ -195,10 +228,10 @@
   font-size: 11px;
   line-height: 13px;
   text-align: center;
-  color: #ffffff;
+  color: $text;
   opacity: 0.5;
-  font-family: Roboto;
-  font-weight: 400;
+  @extend%roboto-400;
+  text-decoration-line: underline;
 }
 
 .banner-footer_links {
@@ -207,393 +240,209 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 11px;
+  a {
+    color: $textGreyHedl;
+    text-decoration-line: underline;
+  }
 }
 
-.banner-footer_links a {
-  font-family: Roboto;
-  font-size: 11px;
-  line-height: 13px;
-  text-decoration-line: underline;
-  color: #bdc0d0;
-}
-
-html[lang='en'] .banner-body__title {
-  text-align: center;
-}
-html[lang='en'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
 html[lang='en'] .subscriptionTitle {
-  position: absolute;
-  top: 2.5vh;
-  left: 0;
-  width: 100%;
   font-size: 18px;
-  text-align: center;
-}
-html[lang='en'] .subscriptionPrice {
-  position: absolute;
-  top: 6vh;
-  font-size: 17px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-html[lang='en'] .subscriptionInfo {
-  position: absolute;
-  top: 12vh;
-  font-size: 14px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-html[lang='en'] .subscriptionSecondPrice {
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
 }
 
-html[lang='es'] .banner-body__title {
-  text-align: center;
-}
-html[lang='es'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
-html[lang='es'] .subscriptionTitle {
-  position: absolute;
-  top: 2.5vh;
-  width: 100%;
+html[lang='en'] .subscriptionPrice {
+  font-size: 17px;
   left: 0;
-  font-size: 18px;
-  text-align: center;
 }
+
+html[lang='en'] .subscriptionInfo {
+  font-size: 14px;
+  left: -0.3vw;
+  width: 34vw;
+}
+
+html[lang='en'] .subscriptionSecondPrice {
+  top: 15.5vh;
+  font-size: 15px;
+  left: 0;
+}
+
+html[lang='es'] .subscriptionTitle {
+  font-size: 18px;
+}
+
 html[lang='es'] .subscriptionPrice {
-  position: absolute;
   top: 6vh;
   font-size: 17px;
-  width: 100%;
   left: 0;
-  text-align: center;
 }
+
 html[lang='es'] .subscriptionInfo {
-  position: absolute;
   top: 12vh;
   font-size: 14px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
 }
+
 html[lang='es'] .subscriptionSecondPrice {
-  position: absolute;
   top: 15.5vh;
   font-size: 15px;
-  width: 100%;
   left: 0;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
 }
 
 html[lang='fr'] .banner-body__title {
   text-align: center;
   padding: 0 2vw;
 }
+
 html[lang='fr'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   padding-left: 20vw;
-  font-family: SF-Pro-Display-Regular;
 }
+
 html[lang='fr'] .subscriptionTitle {
-  position: absolute;
   top: 3.5vh;
-  width: 100%;
   left: 0;
-  text-align: center;
   font-size: 18px;
-  text-align: center;
 }
+
 html[lang='fr'] .subscriptionPrice {
-  position: absolute;
   top: 7vh;
   font-size: 16px;
-  width: 100%;
   left: 0;
-  text-align: center;
 }
+
 html[lang='fr'] .subscriptionInfo {
-  position: absolute;
   top: 12vh;
   font-size: 12px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-html[lang='fr'] .subscriptionSecondPrice {
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  font-family: SF-Pro-Display-Regular;
 }
 
-html[lang='ja'] .banner-body__title {
-  text-align: center;
-}
-html[lang='ja'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
-html[lang='ja'] .subscriptionTitle {
-  position: absolute;
-  top: 2.5vh;
-  width: 100%;
+html[lang='fr'] .subscriptionSecondPrice {
+  top: 15.5vh;
+  font-size: 15px;
   left: 0;
-  text-align: center;
+}
+
+html[lang='ja'] .subscriptionTitle {
+  top: 2.5vh;
+  left: 0;
   font-size: 15px;
 }
+
 html[lang='ja'] .subscriptionPrice {
-  position: absolute;
   top: 7vh;
   font-size: 14px;
-  width: 100%;
   left: 0;
-  text-align: center;
 }
+
 html[lang='ja'] .subscriptionInfo {
-  position: absolute;
   top: 12vh;
   font-size: 12px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-html[lang='ja'] .subscriptionSecondPrice {
-  font-size: 13px;
-  position: absolute;
-  top: 15.5vh;
-  font-size: 13px;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
 }
 
-html[lang='nl'] .banner-body__title {
-  text-align: center;
-}
-html[lang='nl'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
-html[lang='nl'] .subscriptionTitle {
-  position: absolute;
-  top: 2.5vh;
-  width: 100%;
+html[lang='ja'] .subscriptionSecondPrice {
+  font-size: 13px;
+  top: 15.5vh;
+  font-size: 13px;
   left: 0;
-  text-align: center;
+}
+
+html[lang='nl'] .subscriptionTitle {
+  top: 2.5vh;
+  left: 0;
   font-size: 18px;
 }
+
 html[lang='nl'] .subscriptionPrice {
-  position: absolute;
   top: 6vh;
   font-size: 17px;
   left: 0;
-  width: 100%;
-  text-align: center;
 }
+
 html[lang='nl'] .subscriptionInfo {
-  position: absolute;
   top: 12vh;
   font-size: 13px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
 }
+
 html[lang='nl'] .subscriptionSecondPrice {
   font-size: 13px;
-  position: absolute;
   top: 15.5vh;
   font-size: 15px;
   left: 0;
-  width: 100%;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
+}
+
+html[lang='ru'] .title {
+  font-size: 30px;
+  line-height: 36px;
 }
 
 html[lang='ru'] .banner-body__title {
-  text-align: center;
   padding: 0 2vw;
 }
+
 html[lang='ru'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   padding-left: 15vw;
-  font-family: SF-Pro-Display-Regular;
 }
+
 html[lang='ru'] .subscriptionTitle {
-  position: absolute;
   top: 2.5vh;
   font-size: 18px;
   left: 0;
-  width: 100%;
-  text-align: center;
 }
+
 html[lang='ru'] .subscriptionPrice {
-  position: absolute;
   top: 6vh;
   font-size: 17px;
   left: 0;
-  width: 100%;
-  text-align: center;
 }
+
 html[lang='ru'] .subscriptionInfo {
-  position: absolute;
   top: 12vh;
   font-size: 12px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
 }
+
 html[lang='ru'] .subscriptionSecondPrice {
   font-size: 13px;
-  position: absolute;
   top: 15.5vh;
   font-size: 15px;
   left: 0;
-  width: 100%;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
 }
 
 html[lang='zh'] .banner-body__title {
-  text-align: center;
   padding: 0 2vw;
 }
-html[lang='zh'] .banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
+
 html[lang='zh'] .subscriptionTitle {
-  position: absolute;
   top: 2.5vh;
   width: 16vh;
   left: 0;
   width: 100%;
-  text-align: center;
 }
+
 html[lang='zh'] .subscriptionPrice {
-  position: absolute;
   top: 6vh;
   font-size: 14px;
   left: 0;
-  width: 100%;
-  text-align: center;
 }
+
 html[lang='zh'] .subscriptionInfo {
-  position: absolute;
   top: 11vh;
   font-size: 12px;
   left: -0.3vw;
   width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-html[lang='zh'] .subscriptionSecondPrice {
-  font-size: 13px;
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
-}
-.banner-body__title {
-  text-align: center;
-}
-.banner-body__items {
-  margin-top: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding-left: 6vw;
-  font-family: SF-Pro-Display-Regular;
-}
-.subscriptionTitle {
-  position: absolute;
-  top: 2.5vh;
-  font-size: 18px;
-  text-align: center;
-  left: 0;
-  width: 100%;
-}
-.subscriptionPrice {
-  position: absolute;
-  top: 6vh;
-  font-size: 18px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-.subscriptionInfo {
-  position: absolute;
-  top: 12vh;
-  font-size: 15px;
-  left: -0.3vw;
-  width: 34vw;
-  text-align: center;
-  background-color: #495795;
-}
-.subscriptionSecondPrice {
-  position: absolute;
-  top: 15.5vh;
-  font-size: 15px;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  font-family: SF-Pro-Display-Regular;
 }
 
-.fontInfoPrice {
-  font-size: 14px;
+html[lang='zh'] .subscriptionSecondPrice {
+  top: 15.5vh;
+  font-size: 15px;
+  left: 0;
 }
 
 @import 'media';
