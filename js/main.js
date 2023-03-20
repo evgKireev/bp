@@ -25,13 +25,9 @@ if (!langs.includes(lang)) {
 }
 
 const getLanguage = async (language) => {
-  const json = import(`../store/${language}.json`, {
-    type: 'GET',
-    headers: { 'Access-Control-Allow-Origin': '*' },
-    dataType: 'jsonp',
-  })
-  let data = await json
-  return data.default
+  const response = await fetch(`../store/${language}.json`)
+  const data = await response.json()
+  return data
 }
 
 function renderHeader(data) {
