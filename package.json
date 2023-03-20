@@ -6,6 +6,7 @@
   "homepage": "https://evgKireev.github.io/bp",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "ajax": "^0.0.4",
     "del": "^6.0.0",
     "gh-pages": "^5.0.0",
     "imagemin": "^8.0.1",
