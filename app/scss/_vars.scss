@@ -1,0 +1,42 @@
+%roboto-400 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+%sfpro-400 {
+  font-family: 'SF-Pro-Text', sans-serif;
+  font-weight: 400;
+}
+
+%sfprodisplay-400 {
+  font-family: 'SF-Pro-Display-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%sfprodisplay-700 {
+  font-family: 'SF-Pro-Display-Bold', sans-serif;
+  font-weight: 700;
+}
+
+$text: #fff;
+$textGrey: #bdc0d0;
+$textGreyHedl: #ffffff99;
+$bg: linear-gradient(270deg, #1987ff 0%, #19ccff 100%);
+
+%btn {
+  width: 70vw;
+  height: 6.5vh;
+  @extend%sfprodisplay-400;
+  background: $bg;
+  font-size: 17px;
+  line-height: 17px;
+  border-radius: 30px;
+  color: $text;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 80%;
+    transition: all 0.5s;
+  }
+}

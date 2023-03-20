@@ -1,0 +1,11 @@
+@import '_vars.scss';
+
+html,
+body {
+  margin: 0 auto;
+  height: 100%;
+  color: $text;
+  font-family: 'SF-Pro-Display-Regular', sans-serif;
+  line-height: 1.15;
+  width: 100vw;
+}
