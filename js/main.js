@@ -25,15 +25,13 @@ if (!langs.includes(lang)) {
 }
 
 const getLanguage = async (language) => {
-  const json = import(`../store/${language}.json`, {
-    assert: {
-      type: 'json',
+  const data = await fetch(`../store/${language}.json`, {
+    headers: {
+      'Content-Type': 'application/json',
     },
   })
-  let data = await json
-  return data.default
+  return await data.json()
 }
-
 function renderHeader(data) {
   document.querySelector('.restore').innerHTML = `${data['Restore']}`
 }
