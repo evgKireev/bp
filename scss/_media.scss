@@ -1,0 +1,380 @@
+@import './vars';
+@import 'fonts';
+
+@media (min-width: 412px) {
+  .banner__bg {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 44px 20px 0;
+  }
+  .banner-body {
+    margin-top: 120px;
+  }
+
+  .subscriptionTitle {
+    top: 2.5vh;
+  }
+
+  .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+  .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+
+  html[lang='en'] .subscriptionPrice {
+    top: 6vh;
+  }
+  html[lang='en'] .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+  html[lang='en'] .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+
+  html[lang='es'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='es'] .subscriptionPrice {
+    top: 6vh;
+  }
+  html[lang='es'] .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+  html[lang='es'] .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+
+  html[lang='fr'] .subscriptionTitle {
+    top: 3.5vh;
+  }
+  html[lang='fr'] .subscriptionPrice {
+    top: 7vh;
+  }
+  html[lang='fr'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+  html[lang='fr'] .subscriptionSecondPrice {
+    top: 17vh;
+  }
+
+  html[lang='ja'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+
+  html[lang='ja'] .subscriptionPrice {
+    top: 6.5vh;
+  }
+
+  html[lang='ja'] .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+
+  html[lang='ja'] .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+
+  html[lang='nl'] .subscriptionTitle {
+    top: 2.5vh;
+    width: 100%;
+  }
+
+  html[lang='nl'] .subscriptionPrice {
+    top: 6vh;
+  }
+
+  html[lang='nl'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+
+  html[lang='nl'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='ru'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+
+  html[lang='ru'] .subscriptionPrice {
+    top: 7vh;
+  }
+
+  html[lang='ru'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+
+  html[lang='ru'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='zh'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+
+  html[lang='zh'] .subscriptionPrice {
+    top: 7vh;
+  }
+  html[lang='zh'] .subscriptionInfo {
+    top: 12vh;
+    left: -0.3vw;
+    width: 32vw;
+  }
+  html[lang='zh'] .subscriptionSecondPrice {
+    top: 15.5vh;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  .banner__bg {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 20px 20px 0;
+  }
+  .banner-body {
+    margin-top: 90px;
+  }
+
+  .banner-body__items {
+    margin-top: 25px;
+  }
+
+  .banner-body__subscription {
+    margin-top: 30px;
+  }
+  .title {
+    line-height: 35px;
+  }
+
+  .subscriptionPrice {
+    top: 7vh;
+  }
+  .subscriptionInfo {
+    top: 15vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  .subscriptionSecondPrice {
+    top: 18.5vh;
+  }
+
+  html[lang='en'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='en'] .subscriptionPrice {
+    top: 7vh;
+  }
+  html[lang='en'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='en'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='es'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='es'] .subscriptionPrice {
+    top: 6vh;
+  }
+  html[lang='es'] .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+  }
+  html[lang='es'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='fr'] .subscriptionTitle {
+    top: 4.5vh;
+  }
+  html[lang='fr'] .subscriptionPrice {
+    top: 8vh;
+  }
+  html[lang='fr'] .subscriptionInfo {
+    top: 16vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='fr'] .subscriptionSecondPrice {
+    top: 19.5vh;
+  }
+
+  html[lang='ja'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='ja'] .subscriptionPrice {
+    top: 6.5vh;
+  }
+  html[lang='ja'] .subscriptionInfo {
+    top: 13vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='ja'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='nl'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='nl'] .subscriptionPrice {
+    top: 6vh;
+  }
+  html[lang='nl'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='nl'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='ru'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='ru'] .subscriptionPrice {
+    top: 6vh;
+  }
+  html[lang='ru'] .subscriptionInfo {
+    top: 14vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='ru'] .subscriptionSecondPrice {
+    top: 17.5vh;
+  }
+
+  html[lang='zh'] .subscriptionTitle {
+    top: 2.5vh;
+  }
+  html[lang='zh'] .subscriptionPrice {
+    top: 7vh;
+  }
+  html[lang='zh'] .subscriptionInfo {
+    top: 12vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  html[lang='zh'] .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+}
+
+@media screen and (min-width: 375px) and (min-height: 812px) {
+  .banner__bg {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 44px 20px 0;
+  }
+  .banner-body {
+    margin-top: 157px;
+  }
+
+  .subscriptionPrice {
+    top: 6vh;
+  }
+  .subscriptionInfo {
+    top: 12vh;
+    left: -0.3vw;
+    width: 35vw;
+  }
+  .subscriptionSecondPrice {
+    top: 15.5vh;
+  }
+
+  html[lang='en'] .subscriptionInfo {
+    width: 35vw;
+  }
+  html[lang='es'] .subscriptionInfo {
+    width: 35vw;
+  }
+
+  html[lang='fr'] .subscriptionInfo {
+    top: 14vh;
+    width: 35vw;
+  }
+  html[lang='fr'] .subscriptionSecondPrice {
+    top: 16.5vh;
+  }
+
+  html[lang='ja'] .subscriptionInfo {
+    width: 35vw;
+  }
+  html[lang='nl'] .subscriptionInfo {
+    width: 35vw;
+  }
+  html[lang='ru'] .subscriptionInfo {
+    width: 35vw;
+  }
+  html[lang='zh'] .subscriptionInfo {
+    width: 35vw;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 390px) {
+  .banner__bg {
+    height: 100%;
+  }
+  .banner-header {
+    padding: 50px 20px 0;
+  }
+  .banner-body__content {
+    margin-top: 10px;
+  }
+  .banner-body__subscription {
+    padding: 10px 0 10px;
+  }
+
+  .subscriptionInfo {
+    top: 12vh;
+    left: -0.3vw;
+    width: 34vw;
+  }
+  .subscriptionSecondPrice {
+    top: 15.5vh;
+  }
+
+  html[lang='en'] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang='es'] .subscriptionInfo {
+    width: 34vw;
+  }
+
+  html[lang='fr'] .subscriptionInfo {
+    top: 14vh;
+    width: 34vw;
+  }
+
+  html[lang='ja'] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang='nl'] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang='ru'] .subscriptionInfo {
+    width: 34vw;
+  }
+  html[lang='zh'] .subscriptionInfo {
+    width: 34vw;
+  }
+}

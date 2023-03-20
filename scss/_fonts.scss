@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Roboto'),
+    url('../fonts/AnyConv.com__Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/AnyConv.com__Roboto-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: SF-Pro-Text;
+  font-weight: 400;
+  font-style: normal;
+  src: local('SF-Pro-Text'),
+    url('../fonts/AnyConv.com__SF-Pro-Text-Regular.woff2') format('woff2'),
+    url('../fonts/AnyConv.com__SF-Pro-Text-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Bold;
+  font-weight: 700;
+  font-style: normal;
+  src: local('SF-Pro-Display-Bold'),
+    url('../fonts/AnyConv.com__SF-Pro-Display-Bold.woff2') format('woff2'),
+    url('../fonts/AnyConv.com__SF-Pro-Display-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Regular;
+  font-weight: 400;
+  font-style: normal;
+  src: local('SF-Pro-Display-Regular'),
+    url('../fonts/AnyConv.com__SF-Pro-Display-Regular.woff2') format('woff2'),
+    url('../fonts/AnyConv.com__AnyConv.com__SF-Pro-Display-Regular.woff')
+      format('woff');
+  font-display: swap;
+}
