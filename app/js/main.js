@@ -102,11 +102,14 @@ function renderFooter(data) {
 }
 
 const getLanguage = async (language) => {
-  const json = import(`../store/${language}.json`, {
-    assert: {
-      type: 'json',
-    },
-  })
+  const json = import(
+    `https://main--lambent-llama-cb329c.netlify.app/store/${language}.json`,
+    {
+      assert: {
+        type: 'json',
+      },
+    }
+  )
   let data = await json
   return data.default
 }

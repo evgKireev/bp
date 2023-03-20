@@ -6,6 +6,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "del": "^6.0.0",
+    "gh-pages": "^5.0.0",
     "imagemin": "^8.0.1",
     "jquery": "^3.6.0",
     "save-dev": "0.0.1-security",
@@ -24,8 +25,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "meteor": "./app/startServer.sh"
+    "start": "gulp"
   },
   "author": "Yevgeniy Kireev",
   "license": "ISC",
