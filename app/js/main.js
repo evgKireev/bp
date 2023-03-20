@@ -1,3 +1,39 @@
+let systemLanguage = window.navigator.language
+systemLanguage = systemLanguage.slice(0, 2).toLowerCase()
+
+const query = window.location.search.slice(1)
+let queryParams = new URLSearchParams(query)
+
+let lang = 'en'
+let langs = ['en', 'es', 'fr', 'ja', 'nl', 'ru', 'zh']
+
+if (queryParams.has('lang')) {
+  lang = queryParams.get('lang')
+} else {
+  lang = systemLanguage
+  queryParams.set('lang', lang)
+  history.pushState(
+    null,
+    '',
+    `${window.location.pathname}?${queryParams.toString()}`
+  )
+}
+document.documentElement.setAttribute('lang', lang)
+
+if (!langs.includes(lang)) {
+  lang = 'en'
+}
+
+const getLanguage = async (language) => {
+  const json = import(`../store/${language}.json`, {
+    assert: {
+      type: 'json',
+    },
+  })
+  let data = await json
+  return data.default
+}
+
 function renderHeader(data) {
   document.querySelector('.restore').innerHTML = `${data['Restore']}`
 }
@@ -99,45 +135,6 @@ function renderFooter(data) {
   document.querySelector(
     '.banner-footer_linkR'
   ).innerHTML = `  ${data['Privacy Policy']}`
-}
-
-const getLanguage = async (language) => {
-  const json = import(
-    `https://main--lambent-llama-cb329c.netlify.app/store/${language}.json`,
-    {
-      assert: {
-        type: 'json',
-      },
-    }
-  )
-  let data = await json
-  return data.default
-}
-
-let systemLanguage = window.navigator.language
-systemLanguage = systemLanguage.slice(0, 2).toLowerCase()
-
-const query = window.location.search.slice(1)
-let queryParams = new URLSearchParams(query)
-
-let lang = 'en'
-let langs = ['en', 'es', 'fr', 'ja', 'nl', 'ru', 'zh']
-
-if (queryParams.has('lang')) {
-  lang = queryParams.get('lang')
-} else {
-  lang = systemLanguage
-  queryParams.set('lang', lang)
-  history.pushState(
-    null,
-    '',
-    `${window.location.pathname}?${queryParams.toString()}`
-  )
-}
-document.documentElement.setAttribute('lang', lang)
-
-if (!langs.includes(lang)) {
-  lang = 'en'
 }
 
 getLanguage(lang).then((data) => {

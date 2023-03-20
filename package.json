@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "module": "module",
+  "homepage": "https://evgKireev.github.io/bp",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "del": "^6.0.0",
@@ -25,7 +26,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d app"
   },
   "author": "Yevgeniy Kireev",
   "license": "ISC",
