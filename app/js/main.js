@@ -25,7 +25,11 @@ if (!langs.includes(lang)) {
 }
 
 const getLanguage = async (language) => {
-  const response = await fetch(`../store/${language}.json`)
+  const response = await fetch(`../store/${language}.json`, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
   const data = await response.json()
   return data
 }
